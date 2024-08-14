@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taxieco Heatmap Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/panel-select.css" />
+    <link rel="stylesheet" href="./css/panel-buttons.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="banner">
+      <div class="center" id="logo-container">
+        <img src="./svgs/logo.svg" />
+      </div>
+      <div class="center" id="panel-container">
+        <div class="center" id="panel-select">
+          <div class="panel-select-menu" id="demand-type-selector">
+            <span class="panel-select-label">Demand Type</span>
+            <div class="panel-select-btn">
+              <img
+                class="panel-select-label-logo"
+                src="./svgs/demand_type.svg"
+              />
+              <span class="sBtn-text">Demand Type</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+
+            <ul class="options">
+              <li class="option" id="pick-up">
+                <span class="option-text">Pick Up</span>
+              </li>
+              <li class="option" id="drop-off">
+                <span class="option-text">Drop Off</span>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-select-menu" id="data-version-selector">
+            <span class="panel-select-label"
+              >Data Version (1/8/23 - 31/7/24)</span
+            >
+            <div class="panel-select-btn">
+              <img
+                class="panel-select-label-logo"
+                src="./svgs/data_version.svg"
+              />
+              <span class="sBtn-text">Data Version</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+            <ul class="options">
+              <li class="option">
+                <span class="option-text">Monday</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="center" id="panel-slider">
+          <input
+            id="slider-input"
+            type="range"
+            min="0"
+            max="23"
+            value="0"
+            steps="1"
+          />
+          <span id="panel-time-value">00:00</span>
+          <i class="bx bx-play" id="play-btn"></i>
+          <i class="bx bx-pause" id="pause-btn"></i>
+          <i class="bx bx-revision" id="reset-btn"></i>
+        </div>
+      </div>
+    </div>
+    <i class="bx bx-current-location" id="relocate"></i>
+    <div class="center" id="percentile-graph">
+      <ul class="percentile-ranks">
+        <div class="percentile-title center">Percentile</div>
+        <li class="percentile-rank">
+          <span class="percentile-rank-text">15th</span>
+          <img src="./svgs/blue_rectangle.svg" />
+        </li>
+        <li class="percentile-rank">
+          <span class="percentile-rank-text">30th</span>
+          <img src="./svgs/cyan_rectangle.svg" />
+        </li>
+        <li class="percentile-rank">
+          <span class="percentile-rank-text">45th</span>
+          <img src="./svgs/lime_rectangle.svg" />
+        </li>
+        <li class="percentile-rank">
+          <span class="percentile-rank-text">60th</span>
+          <img src="./svgs/yellow_rectangle.svg" />
+        </li>
+        <li class="percentile-rank">
+          <span class="percentile-rank-text">75th</span>
+          <img src="./svgs/red_rectangle.svg" />
+        </li>
+      </ul>
+    </div>
+    <script src="./js/heatmap.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/init-map.js"></script>
+    <script src="./js/panel-select.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/slider-button.js"></script>
+    <script src="./js/demand-type.js"></script>
+  </body>
+</html>

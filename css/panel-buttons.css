@@ -1,0 +1,25 @@
+#panel-slider i {
+  margin-right: 5px;
+  color: white;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#panel-slider i:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#panel-slider i:last-child {
+  font-size: 25px;
+  padding: 3px;
+  margin-right: 0px;
+}
+
+#play-btn {
+  display: block;
+}
+
+#pause-btn {
+  display: none;
+}

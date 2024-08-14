@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#map {
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#banner {
+  position: absolute;
+  height: 150px;
+  width: 800px;
+  top: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+#logo-container {
+  position: relative;
+  height: 50px;
+  width: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#panel-container {
+  position: relative;
+  bottom: 0;
+  height: 100px;
+  width: 800px;
+  gap: 0 25px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#panel-select {
+  width: 45%;
+  height: 100%;
+  gap: 0 15px;
+}
+
+#panel-slider {
+  width: 45%;
+  color: white;
+}
+
+#panel-slider span {
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#panel-slider input {
+  -webkit-appearance: none;
+  width: 55%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  z-index: 2222;
+}
+#panel-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+#relocate {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 5px;
+  bottom: 220px;
+  left: 10px;
+  z-index: 1000;
+}
+
+#relocate:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#percentile-graph {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+  width: 150px;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.percentile-ranks {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.percentile-rank {
+  display: flex;
+  gap: 0 10px;
+}

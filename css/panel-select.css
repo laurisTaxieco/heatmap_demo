@@ -1,0 +1,85 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.panel-select-menu {
+  width: 45%;
+  position: relative;
+}
+.panel-select-label {
+  position: absolute;
+  width: 200px;
+  top: -20px;
+  font-size: 12px;
+  color: white;
+}
+.panel-select-label-logo {
+  margin-right: 10px;
+}
+
+.panel-select-menu .panel-select-btn {
+  display: flex;
+  height: 25px;
+  background: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.panel-select-btn i {
+  font-size: 25px;
+  transition: 0.3s;
+  margin-left: auto;
+}
+.panel-select-menu.active .panel-select-btn i {
+  transform: rotate(-180deg);
+}
+.panel-select-menu .options {
+  position: relative;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.panel-select-menu.active .options {
+  display: block;
+  position: absolute;
+  margin-top: 15px;
+}
+.options .option {
+  position: relative;
+  display: flex;
+  height: 25px;
+  min-width: 120px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  background: #fff;
+}
+.options .option::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%; /* Adjust this value to position the border */
+  width: 80%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5); /* Border style */
+}
+.options .option:last-child:after {
+  border-bottom: none;
+}
+.options .option:hover {
+  background: #f2f2f2;
+}
+.option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+.option .option-text {
+  font-size: 15px;
+  color: #333;
+}
