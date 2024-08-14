@@ -5,6 +5,8 @@ const resetButton = document.querySelector("#reset-btn");
 let playInterval = null;
 
 function resetSlider() {
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
   playInterval && clearInterval(playInterval);
   playInterval = null;
   sliderInput.value = 0;
@@ -13,6 +15,8 @@ function resetSlider() {
 
 function pause() {
   if (playInterval) {
+    playButton.style.display = "block";
+    pauseButton.style.display = "none";
     clearInterval(playInterval);
     playInterval = null;
   }
@@ -20,6 +24,8 @@ function pause() {
 
 function play() {
   if (!playInterval) {
+    playButton.style.display = "none";
+    pauseButton.style.display = "block";
     playInterval = setInterval(() => {
       if (sliderInput.value < 23) {
         sliderInput.value++;
@@ -33,16 +39,10 @@ function play() {
 
 playButton.addEventListener("click", () => {
   play();
-  playButton.style.display = "none";
-  pauseButton.style.display = "block";
 });
 pauseButton.addEventListener("click", () => {
-  pause(),
-    (playButton.style.display = "block"),
-    (pauseButton.style.display = "none");
+  pause();
 });
 resetButton.addEventListener("click", () => {
   resetSlider();
-  playButton.style.display = "block";
-  pauseButton.style.display = "none";
 });
