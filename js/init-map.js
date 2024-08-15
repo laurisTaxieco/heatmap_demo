@@ -7,6 +7,7 @@ var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const pickUpHeatOption = {
   max: 7.134615384615385,
+  minOpacity: 0.1,
   gradient: {
     0.1346153846153846: "blue",
     0.15384615384615385: "cyan",
@@ -18,6 +19,7 @@ const pickUpHeatOption = {
 
 const dropOffHeatOption = {
   max: 5.769230769230769,
+  minOpacity: 0.1,
   gradient: {
     0.1346153846153846: "blue",
     0.15384615384615385: "cyan",
